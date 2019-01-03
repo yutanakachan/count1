@@ -9,12 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var label: UILabel!
+    var num = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    @IBAction func mainasuResult(_ sender: Any) {
+        num = num-1
+        label.text = String(num)
     }
-
-
+    
+    @IBAction func reset(_ sender: Any) {
+        num = 0
+        label.text = String(num)
+    }
+    @IBAction func pulsResult(_ sender: Any) {
+        num = num+1
+        label.text = String(num)
+    }
 }
 
